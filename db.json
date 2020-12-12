@@ -1,0 +1,187 @@
+{
+  "listGouvernorat": [
+    {
+      "id": 1,
+      "name": "Tunis",
+      "nbreDesCas": 1520,
+      "nbrGuerisons": 306,
+      "nbrDesMort": 19
+    },
+    {
+      "id": 2,
+      "name": "Ben Arous",
+      "nbreDesCas": 1183,
+      "nbrGuerisons": 138,
+      "nbrDesMort": 12
+    },
+    {
+      "id": 3,
+      "name": "Gabès",
+      "nbreDesCas": 1114,
+      "nbrGuerisons": 315,
+      "nbrDesMort": 17
+    },
+    {
+      "id": 4,
+      "name": "Sousse",
+      "nbreDesCas": 943,
+      "nbrGuerisons": 169,
+      "nbrDesMort": 26
+    },
+    {
+      "id": 5,
+      "name": "Monastir",
+      "nbreDesCas": 781,
+      "nbrGuerisons": 75,
+      "nbrDesMort": 4
+    },
+    {
+      "id": 6,
+      "name": "Ariana",
+      "nbreDesCas": 533,
+      "nbrGuerisons": 152,
+      "nbrDesMort": 11
+    },
+    {
+      "id": 7,
+      "name": "Kef",
+      "nbreDesCas": 461,
+      "nbrGuerisons": 176,
+      "nbrDesMort": 3
+    },
+    {
+      "id": 8,
+      "name": "Sfax",
+      "nbreDesCas": 428,
+      "nbrGuerisons": 101,
+      "nbrDesMort": 10
+    },
+    {
+      "id": "9",
+      "name": "Nabeul",
+      "nbreDesCas": 423,
+      "nbrGuerisons": 60,
+      "nbrDesMort": 11
+    },
+    {
+      "id": "10",
+      "name": "Médnine",
+      "nbreDesCas": 308,
+      "nbrGuerisons": 166,
+      "nbrDesMort": 10
+    },
+    {
+      "id": "11",
+      "name": "Kairouan",
+      "nbreDesCas": 274,
+      "nbrGuerisons": 90,
+      "nbrDesMort": 6
+    },
+    {
+      "id": "12",
+      "name": "Kébili",
+      "nbreDesCas": 233,
+      "nbrGuerisons": 126,
+      "nbrDesMort": 2
+    },
+    {
+      "id": "13",
+      "name": "Bizerte",
+      "nbreDesCas": 231,
+      "nbrGuerisons": 55,
+      "nbrDesMort": 3
+    },
+    {
+      "id": "14",
+      "name": "Manouba",
+      "nbreDesCas": 218,
+      "nbrGuerisons": 56,
+      "nbrDesMort": 6
+    },
+    {
+      "id": "15",
+      "name": "Tataouine",
+      "nbreDesCas": 185,
+      "nbrGuerisons": 82,
+      "nbrDesMort": 6
+    },
+    {
+      "id": "16",
+      "name": "Jendouba",
+      "nbreDesCas": 172,
+      "nbrGuerisons": 28,
+      "nbrDesMort": 3
+    },
+    {
+      "id": "17",
+      "name": "Sidi Bouzid",
+      "nbreDesCas": 162,
+      "nbrGuerisons": 30,
+      "nbrDesMort": 5
+    },
+    {
+      "id": "18",
+      "name": "Mahdia",
+      "nbreDesCas": 115,
+      "nbrGuerisons": 66,
+      "nbrDesMort": 2
+    },
+    {
+      "id": "19",
+      "name": "Touzeur",
+      "nbreDesCas": 400,
+      "nbrGuerisons": 100,
+      "nbrDesMort": 20
+    }
+  ],
+  "listMedecins": [
+    {
+      "id": 1,
+      "nameDoctor": "Fares Ksontini",
+      "phonenumber": "54 555 222",
+      "namegouv": "Sfax"
+    },
+    {
+      "id": 2,
+      "nameDoctor": "Mohamed Ali Mehrez",
+      "phonenumber": "97 552 466",
+      "namegouv": "Tunis"
+    },
+    {
+      "id": "3",
+      "nameDoctor": "Mohamed Chebbi",
+      "phonenumber": "55 647 852",
+      "namegouv": "Ariana"
+    },
+    {
+      "id": "4",
+      "nameDoctor": "Moncef chaouch",
+      "phonenumber": "55 445 778",
+      "namegouv": "Gabes"
+    },
+    {
+      "id": "5",
+      "nameDoctor": "Maher Seed",
+      "phonenumber": "54 666 888",
+      "namegouv": "Monastir"
+    },
+    {
+      "id": "6",
+      "nameDoctor": "Hamdi Baklouti",
+      "phonenumber": "25 555 555",
+      "namegouv": "Gabes"
+    },
+    {
+      "id": "7",
+      "nameDoctor": "Zied Belhadj",
+      "phonenumber": "90 877 774",
+      "namegouv": "jendouba"
+    },
+    {
+      "id": "8",
+      "nameDoctor": "kacem Chiha",
+      "phonenumber": "99 941 999",
+      "namegouv": "Bizerte"
+    }
+  ]
+}

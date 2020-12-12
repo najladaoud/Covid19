@@ -1,0 +1,79 @@
+<div class="container my-4">
+<h2 class="text-danger ">Évolution du Covid-19 en Tunisie :</h2>
+  <p class="text-white font-weight-bold">Mis à jour : {{ lastUpdate | async | date: 'd/MMMM/y' | uppercase }}</p>
+   <form class="form-check-inline ">
+    <div>
+      <label class="display-4 text-white">
+        Recherche gouvernorat:</label>
+      <input class="form-control mr-sm-2"  type="search" placeholder="Où"
+             aria-label="Search" [(ngModel)]="nameg" name="nameg" (input)="Search()" class="form-control">
+    </div>
+  </form>
+
+<div class="row text-white my-lg-5">
+  <div class="col-sm-8 col-sm-offset-2">
+  <table class="table table-sm table-bordered table-dark ">
+    <thead class="thead-dark">
+    <tr>
+      <th>Id</th>
+      <th>Nom Du Gouvernorat</th>
+      <th>Nombre Des Cas Actuel </th>
+      <th>Nombre De Guérisons</th>
+      <th>Nombre De Décès</th>
+    </tr>
+      </thead>
+    <tbody  *ngFor="let g of listGouvernorat; let i= index" >
+    <tr>
+      <td>{{g.id}}</td>
+      <td>{{g.name}}</td>
+      <td>{{g.nbreDesCas}}</td>
+      <td>{{g.nbrGuerisons}}</td>
+      <td>{{g. nbrDesMort}}</td>
+      <td><button class="btn btn-outline-primary"  [routerLink]="['gouvernorat',g.id]" >Modifier</button></td>
+      <td><button class="btn btn-outline-primary" (click)="delete(g.id)">Supprimer</button></td>
+    </tr>
+    </tbody>
+  </table>
+    <button class="btn btn-primary btn-lg btn-block " (click)="onAjouterclick()" >Ajouter Gouvernorat</button>
+</div>
+</div>
+</div>
+
+
+  <!---
+<table mat-table  class="mat-elevation-z8" [dataSource]="listGouvernorat" >
+
+
+
+<tr *ngFor="let g of listGouvernorat; let i= index">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef > Id </th>
+    <td mat-cell *matCellDef="let element"> {{g.id}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef >name</th>
+    <td mat-cell *matCellDef="let element" > {{g.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nbreDesCas">
+    <th mat-header-cell *matHeaderCellDef> nbreDesCas</th>
+    <td mat-cell *matCellDef="let element"> {{g.nbreDesCas}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="nbrGuerisons">
+    <th mat-header-cell *matHeaderCellDef>nbrGuerisons </th>
+    <td mat-cell *matCellDef="let element"> {{g.nbrGuerisons}} </td>
+  </ng-container>
+  <ng-container matColumnDef="nbrDesMort">
+    <th mat-header-cell *matHeaderCellDef> nbrDesMort </th>
+    <td mat-cell *matCellDef="let element"> {{g.nbrDesMort}} </td>
+  </ng-container>
+</tr>
+
+</table>
+
+</div>
+-->

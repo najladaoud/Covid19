@@ -1,0 +1,65 @@
+
+<!--<div class="row text-white">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Créer un Compte</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Adresse mail</label>
+        <input type="text"
+               id="email"
+               class="form-control"
+               formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password"
+               id="password"
+               class="form-control"
+               formControlName="password">
+      </div>
+      <button class="btn btn-primary"
+              type="submit"
+              [disabled]="signupForm.invalid">Créer mon compte</button>
+    </form>
+    <p class="text-danger">{{ errorMessage }}</p>
+  </div>
+</div>
+
+--->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="assets/image/icon.png" id="icon" alt="User Icon" class="w-25"/>
+    </div>
+
+    <!-- Login Form -->
+    <form  [formGroup]= "signupForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+
+        <input type="email" id="email" class="fadeIn second form-control text-center" name="email" placeholder="Adresse Mail"
+               formControlName="email">
+      </div>
+      <div class="form-group" >
+        <input type="password" id="password" class="form-control fadeIn third text-center " name="login" placeholder="Password"  formControlName="password" >
+      </div>
+      <input type="submit" class="fadeIn fourth" value="Créer Compte"  type="submit"
+             [disabled]="signupForm.invalid">
+    </form>
+    <p class="text-danger">{{ errorMessage }}</p>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#"></a>
+    </div>
+
+  </div>
+</div>

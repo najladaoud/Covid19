@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default pt-3 pb-3" [ngStyle]="{backgroundColor: getColor()}">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active" *ngIf="!isAuth">
+        <a routerLink="/home"  class="text-white" >HOME</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active" *ngIf="isAuth">
+        <a routerLink="/listgouvernorat" class="text-white">LISTE DES GOUVERNORATS</a>
+      </li>
+    </ul>
+    <!--<ul class="nav navbar-nav">
+      <li routerLinkActive="active" *ngIf="isAuth">
+        <a routerLink="/AddGouv" class="text-white">Add Gouvernorat</a>
+      </li>
+    </ul>-->
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active" *ngIf="isAuth">
+        <a routerLink="/Medecins" class="text-white">LISTE DES MEDECINS </a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active" *ngIf="isAuth">
+        <a routerLink="/conceil" class="text-white">CONSEIL </a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li routerLinkActive="active" *ngIf="!isAuth">
+        <a routerLink="auth/signup" class="text-white">CREER UN COMPTE</a>
+      </li>
+    </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li routerLinkActive="active" *ngIf="!isAuth">
+        <a routerLink="auth/signin" class="text-white">CONNEXION</a>
+      </li>
+      </ul>
+    <ul class="nav navbar-nav navbar-right text-white">
+      <li>
+        <a (click)="onSignOut()" *ngIf="isAuth" style="cursor: pointer">DECONNEXION</a>
+      </li>
+    </ul>
+  </div>
+</nav>

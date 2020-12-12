@@ -1,0 +1,38 @@
+<div class="row text-white">
+  <div class="col-sm-8 col-sm-offset-2">
+    <form (ngSubmit)="update()" #f="ngForm">
+      <h3>Modifier les données de médecin</h3>
+
+      <div class="from-group">
+        <label for="id">Id</label>
+        <input type="text" id="id" class="form-control" name="id" [(ngModel)]="m.id"  ngModel required disabled>
+      </div>
+
+      <div class="from-group">
+        <label for="m.nameDoctor">Nom</label>
+        <input type="text" id="m.nameDoctor" class="form-control" name="m.nameDoctor" [(ngModel)]="m.nameDoctor"  #nameDoctor="ngModel" required >
+        <div *ngIf="nameDoctor.invalid && nameDoctor.touched">
+          Ce champ est obligatoire
+        </div>
+      </div>
+
+      <div class="from-group">
+        <label for="phonenumber"> Numéro de téLéphone</label>
+        <input type="text" id="phonenumber" class="form-control" name="phonenumber" [(ngModel)]="m.phonenumber"  #phonenumber="ngModel"  required mask="00 000 000">
+        <div *ngIf="phonenumber.invalid && phonenumber.touched">
+          Ce champ est obligatoire
+        </div>
+      </div>
+
+      <div class="from-group">
+        <label for="namegouv">Nom de gouvernorat</label>
+        <input type="text" id="namegouv" class="form-control" name="namegouv" [(ngModel)]="m.namegouv"  #namegouv="ngModel" required >
+        <div *ngIf="namegouv.invalid && namegouv.touched">
+          Ce champ est obligatoire
+        </div>
+      </div>
+       <br>
+      <button type="submit" class="btn btn-success" [disabled]="f.invalid">Confirmer</button>
+    </form>
+  </div>
+</div>

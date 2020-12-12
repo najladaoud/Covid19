@@ -1,0 +1,67 @@
+
+<div class="row text-white">
+  <div class="col-sm-8 col-sm-offset-2">
+<form [formGroup]="addForm" (ngSubmit)="addGouv()">
+
+  <div class="form-group">
+     <label>Id : </label>
+     <input type ="text" formControlName="id" class="form-control" [(ngModel)]="g.id">
+  </div>
+
+  <div class="alert alert-danger" *ngIf="addForm.controls['id'].touched && addForm.controls['id'].hasError('required')">
+       <div>
+         Ce champ est obligatoire
+       </div>
+  </div>
+
+    <div class="form-group">
+        <label>Nom Gouvernorat :</label>
+        <input type="text" formControlName="name" class="form-control" [(ngModel)]="g.name">
+    </div>
+
+    <div >
+        <div class="alert alert-danger" *ngIf="addForm.controls['name'].hasError('required') && addForm.controls['name'].touched">
+          Ce champ est obligatoire
+        </div>
+        <div class="alert alert-danger" *ngIf="addForm.controls['name'].hasError('pattern') && addForm.controls['name'].touched">
+          Le champ id contient seulement
+        </div>
+    </div>
+
+      <div class="form-group">
+        <label>Nombre des Cas Coronavirus</label>
+        <input type="number" formControlName="nbreDesCas" class="form-control" [(ngModel)]="g.nbreDesCas">
+      </div>
+
+      <div class="alert alert-danger" *ngIf="addForm.get('nbreDesCas').errors && addForm.controls['nbreDesCas'].touched">
+        <div *ngIf="addForm.controls['nbreDesCas'].hasError('required')">
+          Ce champ est obligatoire
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Nombre des guérisons </label>
+        <input type="number" formControlName="nbrGuerisons" class="form-control" [(ngModel)]="g.nbrGuerisons">
+      </div>
+
+      <div class="alert alert-danger" *ngIf="addForm.get('nbrGuerisons').errors && addForm.controls['nbrGuerisons'].touched">
+        <div *ngIf="addForm.controls['nbrGuerisons'].hasError('required')">
+         Ce champ est obligatoire
+        </div>
+      </div>
+
+  <div class="form-group">
+    <label>Nombre de décés</label>
+    <input type="number" formControlName="nbrDesMort" class="form-control" [(ngModel)]="g.nbrDesMort">
+  </div>
+
+  <div class="alert alert-danger" *ngIf="addForm.get('nbrDesMort').errors && addForm.controls['nbrDesMort'].touched">
+    <div *ngIf="addForm.controls['nbrDesMort'].hasError('required')">
+      Ce champ est obligatoire
+    </div>
+  </div>
+  <button type="submit" [disabled]="addForm.invalid" class="btn btn-success" >Ajouter</button>
+ <!--<button  class="btn btn-warning" (click)="reset()">Cancel</button>-->
+</form>
+</div>
+</div>

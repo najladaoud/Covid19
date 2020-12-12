@@ -1,0 +1,46 @@
+<div class="row text-white">
+  <div class="col-sm-8 col-sm-offset-2">
+    <form (ngSubmit)="update()" #f="ngForm">
+      <h3>Modifier les données de gouvernorat</h3>
+
+      <div class="from-group">
+        <label for="id">Id</label>
+        <input type="text" id="id" class="form-control" name="id" [(ngModel)]="g.id"  ngModel required disabled>
+      </div>
+
+      <div class="from-group">
+        <label for="name">Nom</label>
+        <input type="text" id="name" class="form-control" name="name" [(ngModel)]="g.name"  #name="ngModel" required >
+         <div *ngIf="name.invalid && name.touched">
+           Ce champ est obligatoire
+        </div>
+      </div>
+
+      <div class="from-group">
+        <label for="nbreDesCas">Nombre des cas</label>
+        <input type="number" id="nbreDesCas" class="form-control" name="nbreDesCas" [(ngModel)]="g.nbreDesCas"  #nbreDesCas="ngModel" required >
+        <div *ngIf="nbreDesCas.invalid && nbreDesCas.touched">
+          Ce champ est obligatoire
+        </div>
+      </div>
+
+      <div class="from-group">
+        <label for="nbrGuerisons">Nombre de Guerison</label>
+        <input type="number" id="nbrGuerisons" class="form-control" name="nbrGuerisons" [(ngModel)]="g.nbrGuerisons"  #nbrGuerisons="ngModel" required >
+        <div *ngIf="nbrGuerisons.invalid && nbrGuerisons.touched">
+          Ce champ est obligatoire
+        </div>
+      </div>
+
+      <div class="from-group">
+        <label for="nbrDesMort">Nombre des décés</label>
+        <input type="number" id="nbrDesMort" class="form-control" name="nbrDesMort" [(ngModel)]="g.nbrDesMort"  #nbrDesMort="ngModel" required >
+        <div *ngIf="nbrDesMort.invalid && nbrDesMort.touched">
+          Ce champ est obligatoire
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-success" [disabled]="f.invalid">Confirmer</button>
+    </form>
+      </div>
+</div>

@@ -1,0 +1,29 @@
+<h2 class="text-danger my-lg-3 ">Liste des médecins volontaires:</h2>
+<p class="text-white"> Vous pouvez contacter l'un de nos médecins en cas d'urgence </p>
+<p class="text-white font-weight-bold">Mis à jour : {{ lastUpdate | async | date: 'd/MMMM/y' | uppercase }}</p>
+<div class="row text-white my-lg-5" >
+  <div class="col-sm-8 col-sm-offset-2">
+    <table class="table table-sm table-dark">
+      <tr>
+        <th>Id médecin</th>
+        <th>Nom médecin</th>
+        <th> Numéro téléphone</th>
+        <th>Nom de gouvernorat</th>
+      </tr>
+      <tbody  *ngFor="let m of listMed; let i= index" >
+      <tr>
+        <td>{{m.id}}</td>
+        <td>{{m.nameDoctor}}</td>
+        <td>{{m.phonenumber}}</td>
+        <td>{{m.namegouv}}</td>
+
+        <td><button class="btn btn-outline-primary" [routerLink]="['Medecin',m.id]" >Modifier</button></td>
+        <td><button class="btn btn-outline-primary" (click)="delete(m.id)">Supprimer</button></td>
+      </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-primary btn-lg btn-block " (click)="onAjouterclick()" >Ajouter Medecin</button>
+  </div>
+
+</div>
+

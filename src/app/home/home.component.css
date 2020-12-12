@@ -1,0 +1,30 @@
+/*{margin:0px; padding:0px}
+.banner{position: relative;width: ; margin: 0px auto;}
+.banner img{width:150%; height: 100% ; }
+.heading{color: blanchedalmond;position: absolute;top:15%;width: 100%;text-align: center;}
+
+.box {
+  text-transform: uppercase;
+  top: 50%;
+  color: darkcyan;
+  position: absolute;
+  width: 100%;
+}*/
+/*
+.box{
+  text-transform: uppercase;
+  top:50%;
+  color: darkcyan;
+  position: absolute;
+  width:100%;
+}*/
+
+/*===== FIXED BACKGROUND IMG =====*/
+
+.box{
+  text-transform: uppercase;
+  top:50%;
+  color: darkred;
+  position: absolute;
+  width:80%;
+}
